@@ -9,6 +9,25 @@ registries on **Base Sepolia**, and returns trust **evidence** — not a verdict
 
 > Beacon reports the receipts and leaves the trust decision to the caller and to NANDA.
 
+## Live deployment
+
+Beacon is deployed and registered as a citizen in the NANDA City of Agents.
+
+| | |
+|---|---|
+| Service | https://nanda-beacon-production.up.railway.app |
+| Agent card | https://nanda-beacon-production.up.railway.app/.well-known/agent.json |
+| SKILL.MD | https://nanda-beacon-production.up.railway.app/SKILL.MD |
+| City registry | `agent_id: beacon` — `GET http://67.205.176.71/api/registry/lookup/beacon` |
+
+Try it (reads real ERC-8004 data on Base Sepolia, live):
+
+```bash
+curl -s -X POST https://nanda-beacon-production.up.railway.app/chat \
+  -H 'content-type: application/json' \
+  -d '{"message":"enrich agent 17"}'
+```
+
 ## Why
 
 Trust on the agentic web is shifting from human oversight to protocol design. NANDA's
