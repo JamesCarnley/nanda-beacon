@@ -28,6 +28,13 @@ curl -s -X POST https://nanda-beacon-production.up.railway.app/chat \
   -d '{"message":"enrich agent 17"}'
 ```
 
+Or run the narrated end-to-end demo (no dependencies):
+
+```bash
+python3 demo.py            # hits the live deployment
+python3 demo.py --pause    # step through it on a screen-share
+```
+
 ## Why
 
 Trust on the agentic web is shifting from human oversight to protocol design. NANDA's
